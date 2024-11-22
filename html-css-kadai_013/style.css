@@ -15,15 +15,11 @@ body {
         min-width: 960px;
         margin: 0 auto 0 auto;
       }
-  
       /* ヘッダー */
       header {
         display: flex;
         justify-content: space-between;
       }
-  
-    /*======== 中略 ========*/
-  
       #sns-footer {
         text-align: left;
         width: 100%;
@@ -37,9 +33,13 @@ body {
         color: #ffffff;
         float: right;}
       }
-
-
-
+      /* SP用ナビゲーション非表示 */
+#menu-sp {
+  display: none;
+}
+#nav-sp {
+  display: none;
+} 
 
 @media screen and (max-width: 767px) {
   body {
@@ -47,12 +47,12 @@ body {
       margin: 0;
   }
   
-  #nav-pc {
+  .nav-pc {
       display: none; /* PCのナビゲーションを非表示 */
   }
 
   #menu-sp {
-      display: none; /* スマートフォンのメニューを非表示 */
+      display: block; /* スマートフォンのメニューを非表示 */
       float: right;
       padding: 0;
   }
@@ -64,7 +64,6 @@ body {
       top: 0;
       height: 100%;
       width: 100%;
-      display: none; /* スマートフォンのナビゲーションを非表示 */
       z-index: 100;
   }
 
@@ -103,7 +102,4 @@ body {
       background-repeat: no-repeat;
       background-position: right top;
   }
- 
-
-
 }
